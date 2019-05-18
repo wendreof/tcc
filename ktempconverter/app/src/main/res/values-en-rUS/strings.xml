@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">KTempConverter</string>
+    <string name="et_label_temp">Type a temperature in Celsius to conversion</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="convert_temperature">CONVERT TEMPERATURE</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="temperature_is_missing">Please type a temperature!</string>
+    <string name="form">Formula</string>
+    <string name="please_type_a_temp">Please type a temperature in °C</string>
+    <string name="type_a_valid_value">Type a valid value!</string>
+    <string name="temp_in_celsius">Temperature em °C</string>
+    <string name="equals">=</string>
+    <string name="clear">Clear</string>
+
+</resources>

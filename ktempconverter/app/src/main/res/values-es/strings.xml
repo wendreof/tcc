@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Convertidor de Temperatura</string>
+    <string name="et_label_temp">Escriba una temperatura en grados Celsius a conversión</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="convert_temperature">CONVERTIR TEMPERATURA</string>
+    <string name="kelvin">Kelvin</string>
+    <string name="temperature_is_missing">Por favor escriba una temperatura!</string>
+    <string name="form">Fórmula</string>
+    <string name="please_type_a_temp">Por favor, escriba una temperatura en ° C</string>
+    <string name="type_a_valid_value">Escriba un valor válido!</string>
+    <string name="temp_in_celsius">Temperatura em ° C</string>
+    <string name="equals">=</string>
+    <string name="clear">Limpio</string>
+
+</resources>
