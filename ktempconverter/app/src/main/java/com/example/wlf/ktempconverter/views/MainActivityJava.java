@@ -39,11 +39,9 @@ public class MainActivityJava extends AppCompatActivity {
         converterButton = findViewById(R.id.converterButton);
         KelvinRadio = findViewById(R.id.KelvinRadio);
         fahrenheitRadio = findViewById(R.id.fahrenheitRadio);
-
-        clearFields();
     }
 
-    private void convert() {
+    public void convert(View v) {
 
         final String temp = valorTemp.getText().toString();
 
@@ -70,7 +68,7 @@ public class MainActivityJava extends AppCompatActivity {
 
         if (e == 'F') {
             formula.setText(String.format("Fórmula (%sºC× 9/5) + 32 =%sº%s", w, b, e));
-        } else if (e == 'k') {
+        } else if (e == 'K') {
             formula.setText(String.format("Fórmula %sºC + 273.15 =%sº%s", w, b, e));
         } else {
             formula.setText("0");
@@ -81,10 +79,11 @@ public class MainActivityJava extends AppCompatActivity {
         Snackbar.make(linear_layout_main_JAVA, msg, Snackbar.LENGTH_LONG).show();
     }
 
-    private void clearFields() {
+    public void clearFields(View v) {
         formula.setVisibility(GONE);
         formula.setText("");
         valorTemp.setText("");
         converted.setText("");
     }
+
 }

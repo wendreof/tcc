@@ -9,16 +9,17 @@
     <Button
         android:id="@+id/btnAndroid"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Android"
+        android:layout_height="215dp"
+        android:background="@drawable/java_logo_icon"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="258dp" />
 
     <Button
         android:id="@+id/btnKotlin"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Kotlin"
+        android:layout_height="202dp"
+        android:background="@drawable/kotlin_logo_icon"
         tools:layout_editor_absoluteX="161dp"
         tools:layout_editor_absoluteY="332dp" />
 

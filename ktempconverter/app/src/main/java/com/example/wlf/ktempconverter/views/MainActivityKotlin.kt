@@ -18,7 +18,6 @@ class MainActivityKotlin : AppCompatActivity() {
 
         converterButton.setOnClickListener { convert() }
         clear.setOnClickListener { clearFields() }
-        clearFields()
     }
 
     private fun convert() {
