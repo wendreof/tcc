@@ -16,8 +16,6 @@ import com.example.wlf.ktempconverter.classes.Adapter.AdapterJava;
 import static android.view.View.GONE;
 
 public class MainActivityJava extends AppCompatActivity {
-
-    //private val tempAdapter = AdapterKotlin()
     private AdapterJava tempAdapter = new AdapterJava();
 
     private EditText valorTemp;
@@ -28,7 +26,6 @@ public class MainActivityJava extends AppCompatActivity {
     private RadioButton fahrenheitRadio;
     private RadioButton KelvinRadio;
     private ScrollView linear_layout_main_JAVA;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +41,6 @@ public class MainActivityJava extends AppCompatActivity {
         fahrenheitRadio = findViewById(R.id.fahrenheitRadio);
 
         clearFields();
-
     }
 
     private void convert() {
@@ -77,7 +73,7 @@ public class MainActivityJava extends AppCompatActivity {
         } else if (e == 'k') {
             formula.setText(String.format("Fórmula %sºC + 273.15 =%sº%s", w, b, e));
         } else {
-            formula.setText(0);
+            formula.setText("0");
         }
     }
 
