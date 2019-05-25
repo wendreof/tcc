@@ -27,6 +27,13 @@
             android:textSize="20sp"
             android:typeface="serif" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:text="Java"/>
+
         <EditText
             android:id="@+id/valorTemp"
             android:layout_width="match_parent"
