@@ -5,16 +5,20 @@ import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import android.view.WindowManager
 import com.example.wlf.ktempconverter.R
 import com.example.wlf.ktempconverter.classes.Adapter.AdapterKotlin
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main_kotlin.*
 
 class MainActivityKotlin : AppCompatActivity() {
     private val tempAdapter = AdapterKotlin()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_kotlin)
+
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        window.addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         converterButton.setOnClickListener { convert() }
         clear.setOnClickListener { clearFields() }
@@ -46,15 +50,15 @@ class MainActivityKotlin : AppCompatActivity() {
     private fun viewFormula(w: Float, e: Char, b: Float): String {
         formula.visibility = VISIBLE
         return when (e) {
-            'F' -> formula.setText("Fórmula (${w}ºC × 9/5) + 32 = ${b}º$e").toString()
+            'F' -> formula.setText("Formula (${w}ºC × 9/5) + 32 = ${b}º$e").toString()
 
-            'K' -> formula.setText("Fórmula ${w}ºC + 273.15 = ${b}º$e").toString()
+            'K' -> formula.setText("Formula ${w}ºC + 273.15 = ${b}º$e").toString()
 
             else -> "0"
         }
     }
 
-    private fun showMSG(msg: String) = Snackbar.make(linear_layout_main, msg, Snackbar.LENGTH_LONG).show()
+    private fun showMSG(msg: String) = Snackbar.make(scrollview, msg, Snackbar.LENGTH_LONG).show()
 
     private fun clearFields() {
         formula.visibility = GONE

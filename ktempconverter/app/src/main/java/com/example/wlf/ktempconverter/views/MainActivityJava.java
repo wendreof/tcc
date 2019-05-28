@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -25,12 +26,15 @@ public class MainActivityJava extends AppCompatActivity {
     private Button converterButton;
     private RadioButton fahrenheitRadio;
     private RadioButton KelvinRadio;
-    private ScrollView linear_layout_main_JAVA;
+    private ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_java);
+
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         valorTemp = findViewById(R.id.valorTemp);
         formula = findViewById(R.id.formula);
@@ -67,16 +71,16 @@ public class MainActivityJava extends AppCompatActivity {
         formula.setVisibility(View.VISIBLE);
 
         if (e == 'F') {
-            formula.setText(String.format("Fórmula (%sºC× 9/5) + 32 =%sº%s", w, b, e));
+            formula.setText(String.format("Formula (%sºC× 9/5) + 32 = %sº%s", w, b, e));
         } else if (e == 'K') {
-            formula.setText(String.format("Fórmula %sºC + 273.15 =%sº%s", w, b, e));
+            formula.setText(String.format("Formula %sºC + 273.15 = %sº%s", w, b, e));
         } else {
             formula.setText("0");
         }
     }
 
     private void showMSG(String msg) {
-        Snackbar.make(linear_layout_main_JAVA, msg, Snackbar.LENGTH_LONG).show();
+        Snackbar.make(scrollView, msg, Snackbar.LENGTH_LONG).show();
     }
 
     public void clearFields(View v) {
@@ -85,5 +89,4 @@ public class MainActivityJava extends AppCompatActivity {
         valorTemp.setText("");
         converted.setText("");
     }
-
 }
