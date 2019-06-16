@@ -5,6 +5,8 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
+
+/* Necessária a importação dos widgets */
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -19,6 +21,8 @@ import static android.view.View.GONE;
 public class MainActivityJava extends AppCompatActivity {
     private AdapterJava tempAdapter = new AdapterJava();
 
+    /* Necessaria a criacao de atributos de mesmo tipo dos widgets declarados no arquivo XML de
+     interface para utilizar-se na funcao findViewById */
     private EditText valorTemp;
     private TextView formula;
     private TextView converted;
@@ -33,9 +37,12 @@ public class MainActivityJava extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_java);
 
+        /* Pontos e virgulas obrigatórios ao final */
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
+        /* Necessaria a realizacao da captura de cada um dos widgets de interface declarados
+         no arquivo XML de interface */
         valorTemp = findViewById(R.id.valorTemp);
         formula = findViewById(R.id.formula);
         converted = findViewById(R.id.converted);
@@ -45,12 +52,15 @@ public class MainActivityJava extends AppCompatActivity {
         fahrenheitRadio = findViewById(R.id.fahrenheitRadio);
     }
 
+    /* Obrigatorio o recebimento de um parametro do tipo View para ser utilizado
+     no atributo onClick pelos widgets de interface */
     public void convert(View v) {
 
         final String temp = valorTemp.getText().toString();
 
         if (!temp.isEmpty() && !temp.equals("0")) {
 
+            /* Necessaria a criacao de variavel auxiliar para atribuicao de valor */
             final Float tempF = Float.parseFloat(valorTemp.getText().toString());
 
             if (fahrenheitRadio.isChecked()) {
@@ -71,6 +81,9 @@ public class MainActivityJava extends AppCompatActivity {
         formula.setVisibility(View.VISIBLE);
 
         if (e == 'F') {
+
+            /* Necessaria a utilizacao de String.format para facilitar interpolacao de variaveis
+            e textos */
             formula.setText(String.format("Formula (%sºC× 9/5) + 32 = %sº%s", w, b, e));
         } else if (e == 'K') {
             formula.setText(String.format("Formula %sºC + 273.15 = %sº%s", w, b, e));
