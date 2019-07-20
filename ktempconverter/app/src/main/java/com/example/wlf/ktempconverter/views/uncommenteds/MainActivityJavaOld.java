@@ -1,4 +1,4 @@
-package com.example.wlf.ktempconverter.views;
+package com.example.wlf.ktempconverter.views.uncommenteds;
 
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.WindowManager;
 
-/* Necessaria a importação dos widgets */
+/* Necessária a importação dos widgets */
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -18,7 +18,7 @@ import com.example.wlf.ktempconverter.classes.Adapter.AdapterJava;
 
 import static android.view.View.GONE;
 
-public class MainActivityJava extends AppCompatActivity {
+public class MainActivityJavaOld extends AppCompatActivity {
     private AdapterJava tempAdapter = new AdapterJava();
 
     /* Necessaria a criacao de atributos de mesmo tipo dos widgets declarados no arquivo XML de
@@ -37,7 +37,7 @@ public class MainActivityJava extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_java);
 
-        /* Pontos e virgulas obrigatorios ao final */
+        /* Pontos e virgulas obrigatórios ao final */
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 

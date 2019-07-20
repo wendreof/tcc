@@ -16,7 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.MainActivityJava" />
+        <activity android:name=".views.uncommenteds.MainActivityJava" />
         <activity android:name=".views.MainActivityKotlin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

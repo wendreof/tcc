@@ -13,7 +13,7 @@ import com.example.wlf.ktempconverter.classes.Adapter.AdapterKotlin
  declarados no arquivo XML de interface */
 import kotlinx.android.synthetic.main.activity_main_kotlin.*
 
-class MainActivityKotlin : AppCompatActivity() {
+class MainActivityKotlinOld : AppCompatActivity() {
     private val tempAdapter = AdapterKotlin()
 
     /* Declara-se na mesma linha que se trata de uma funcao de sobreescrita */

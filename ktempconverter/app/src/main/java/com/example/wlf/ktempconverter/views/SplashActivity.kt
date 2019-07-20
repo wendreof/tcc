@@ -4,6 +4,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.example.wlf.ktempconverter.R
+import com.example.wlf.ktempconverter.views.uncommenteds.MainActivityJava
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
