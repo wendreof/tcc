@@ -4,7 +4,7 @@
     android:id="@+id/linear_layout_main_JAVA"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.MainActivityKotlin">
+    tools:context="design.wendreo.tcc.views.MainActivityKotlin">
 
     <LinearLayout
         android:layout_width="match_parent"

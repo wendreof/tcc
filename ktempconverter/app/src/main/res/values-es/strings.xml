@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Convertidor de Temperatura</string>
+    <string name="app_name">TCC - Wendreo</string>
     <string name="et_label_temp">Escriba una temperatura en grados Celsius a conversión</string>
     <string name="celsius">Celsius</string>
     <string name="fahrenheit">Fahrenheit</string>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".views.SplashActivity">
+    tools:context="design.wendreo.tcc.views.SplashActivity">
 
     <Button
         android:id="@+id/btnAndroid"

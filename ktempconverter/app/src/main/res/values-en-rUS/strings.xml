@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">KTempConverter</string>
+    <string name="app_name">TCC - Wendreo</string>
     <string name="et_label_temp">Type a temperature in Celsius to conversion</string>
     <string name="celsius">Celsius</string>
     <string name="fahrenheit">Fahrenheit</string>
